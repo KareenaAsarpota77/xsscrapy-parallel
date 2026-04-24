@@ -15,8 +15,8 @@ Python tool to automate and parallelize XSS scanning using xsscrapy, with timeou
 
 ## Installation
 
-git clone https://github.com/KareenaAsarpota77/xsscrapy-parallel.git
-cd xsscrapy-parallel
+* git clone https://github.com/KareenaAsarpota77/xsscrapy-parallel.git
+* cd xsscrapy-parallel
 
 ## Usage
 
