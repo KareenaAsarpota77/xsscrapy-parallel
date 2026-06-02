@@ -1,66 +1,49 @@
-# Cyber Port Scanner Dashboard
-
-## Overview
-A web-based network security tool built with Flask that performs TCP port scanning, identifies open and closed ports, and visualizes results with basic reporting. The project demonstrates fundamental concepts of network scanning, socket programming, and security reporting.
+# xsscrapy-parallel
+Python tool to automate and parallelize XSS scanning using xsscrapy, with timeout handling and structured result storage.
 
 ## Features
-- TCP port scanning using Python sockets
-- Web-based dashboard using Flask
-- Open and closed port detection
-- Graphical visualization using Matplotlib
-- Timestamped scan report generation
-- Domain and IP-based scanning support
+
+* Parallel scanning using thread pools
+* Automatic output saving per target
+* Graceful timeout handling
+* Simple and customizable configuration
 
 ## Requirements
-- Python 3.8 or higher
-- Flask
-- Matplotlib
 
-Install dependencies:
-pip install flask matplotlib
+* Python 3.x
+* xsscrapy (placed inside the xsscrapy directory)
 
-## Folder Structure
+## Installation
 
-The application requires the following directory structure:
+* git clone https://github.com/KareenaAsarpota77/xsscrapy-parallel.git
+* cd xsscrapy-parallel
 
-cyber-port-scanner/
-├── app.py
-├── scanner.py
-├── templates/
-│   └── index.html
-├── static/ (stores generated visualization files)
-├── reports/ (stores generated scan reports)
-└── README.md
+## Usage
 
-Note: Create the static/ and reports/ directories before running the application.
+1. Add target URLs to targets.txt (one per line)
 
-## Execution
+2. Run:
+   python scan.py
 
-Start the application:
-python app.py
+## Configuration
 
-Open in browser:
-http://127.0.0.1:5000/
-
-## Input
-- IPv4 addresses
-- Domain names
-
-Example inputs:
-- 127.0.0.1 (local testing only)
-- scanme.nmap.org (authorized test environment for security learning)
-
-## Output
-- Open/closed port results
-- Graph visualization
-- Scan report file
+* MAX_WORKERS: Number of parallel scans
+* total_runtime: Total execution time limit
 
 ## Disclaimer
+
 This project is intended for educational purposes and authorized security testing only.
 
-The author is not responsible for misuse or damage caused by this tool. Users are responsible for ensuring proper authorization before scanning any target systems.
+The author is not responsible for any misuse or damage caused by this tool. You are responsible for ensuring that you have permission to test any target.
 
-Unauthorized scanning may violate applicable laws and regulations.
+Unauthorized security testing may violate applicable laws.
 
 ## License
-MIT License
+Copyright (c) 2014, Dan McInerney All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+Neither the name of Dan McInerney nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
